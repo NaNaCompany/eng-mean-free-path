@@ -1,0 +1,52 @@
+export const tool = {
+  "id": "E040",
+  "title": "기체 평균자유행로 계산기",
+  "inputs_text": "분자 충돌지름 d [m], 절대압 p [Pa], 절대온도 T [K]",
+  "formula": "λ = k_B T / (√2 π d² p)",
+  "output_text": "평균자유행로 λ [m]",
+  "assumptions": "d,p,T>0. 동일 구형 입자의 희박 이상기체 모델이다. 반지름 대신 충돌지름을 입력하며 혼합기체·실제 분자 상호작용의 정밀 예측은 아니다.",
+  "purpose": "평균자유행로 계산 / 진공·기체 운동론 검산",
+  "sources": [
+    {
+      "label": "OpenStax · Pressure, Temperature, and RMS Speed",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/2-2-pressure-temperature-and-rms-speed"
+    }
+  ],
+  "slug": "eng-mean-free-path",
+  "category": "기체",
+  "result_label": "평균자유행로 λ",
+  "result_dimension": "length",
+  "fields": [
+    {
+      "key": "d",
+      "label": "분자 충돌지름 d",
+      "dimension": "length",
+      "example": 3.7e-10,
+      "constraint": "positive",
+      "display_unit": "nm",
+      "display_value": "0.37"
+    },
+    {
+      "key": "p",
+      "label": "절대압 p",
+      "dimension": "pressure",
+      "example": 101325,
+      "constraint": "positive",
+      "display_unit": "kPa",
+      "display_value": "101.325"
+    },
+    {
+      "key": "t",
+      "label": "절대온도 T",
+      "dimension": "temperature",
+      "example": 300,
+      "constraint": "positive",
+      "display_unit": "K",
+      "display_value": "300"
+    }
+  ],
+  "site": "https://nanalab.kr/eng-mean-free-path/",
+  "repository": "https://github.com/NaNaCompany/eng-mean-free-path",
+  "condition": "",
+  "output_unit": "nm"
+};
